@@ -2,285 +2,317 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/detail"
-    tools:context=".DetailActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background3"
-    android:orientation="vertical"
     android:gravity="center"
-    android:paddingHorizontal="15dp">
+    android:orientation="vertical"
+    android:paddingHorizontal="15dp"
+    tools:context=".DetailActivity">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="550dp"
         android:background="@drawable/custom_bacground"
         android:paddingHorizontal="15dp"
         android:paddingVertical="15dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/icon_detail"
-                android:layout_gravity="center_horizontal"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Let's learn more about"
-                android:fontFamily="@font/nregular"
-                android:textSize="30sp"
-                android:textColor="@color/white"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginVertical="10dp"/>
+                android:src="@drawable/icon_detail" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rendang!"
-                android:fontFamily="@font/nbold"
-                android:textSize="30sp"
-                android:textColor="@color/mint_green"
-                android:layout_gravity="center_horizontal"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Description"
-                android:fontFamily="@font/nbold"
-                android:textSize="20sp"
-                android:textColor="@color/mint_green"
-                android:layout_marginTop="20dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rendang is a meat-based dish produced from a long, low temperature cooking process using various spices and coconut milk."
-                android:fontFamily="@font/nlight"
-                android:textSize="15sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/nregular"
+                android:text="Let's learn more about"
                 android:textColor="@color/white"
-                android:layout_marginVertical="10dp"/>
+                android:textSize="30sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Description"
+                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/nbold"
-                android:textSize="20sp"
+                android:text="Rendang!"
                 android:textColor="@color/mint_green"
-                android:layout_marginTop="5dp"/>
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/nbold"
+                android:text="Description"
+                android:textColor="@color/mint_green"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/nlight"
+                android:text="Rendang is a meat-based dish produced from a long, low temperature cooking process using various spices and coconut milk."
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/nbold"
+                android:text="Description"
+                android:textColor="@color/mint_green"
+                android:textSize="20sp" />
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <TextView
                     android:id="@+id/label_calories"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Calories : "
+                    android:layout_marginVertical="10dp"
                     android:fontFamily="@font/nlight"
-                    android:textSize="15sp"
+                    android:text="Calories : "
                     android:textColor="@color/white"
-                    android:layout_marginVertical="10dp"/>
+                    android:textSize="15sp" />
+
                 <TextView
                     android:id="@+id/calories"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="500"
-                    android:fontFamily="@font/nlight"
-                    android:textSize="15sp"
-                    android:textColor="@color/white"
                     android:layout_marginVertical="10dp"
-                    android:layout_toRightOf="@+id/label_calories"/>
+                    android:layout_toRightOf="@+id/label_calories"
+                    android:fontFamily="@font/nlight"
+                    android:text="500"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
                 <TextView
                     android:id="@+id/unit_calories"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="kkal"
-                    android:fontFamily="@font/nlight"
-                    android:textSize="15sp"
-                    android:textColor="@color/white"
                     android:layout_marginVertical="10dp"
-                    android:layout_toRightOf="@+id/calories"/>
+                    android:layout_toRightOf="@+id/calories"
+                    android:fontFamily="@font/nlight"
+                    android:text="kkal"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
                 <ProgressBar
-                    android:layout_below="@+id/label_calories"
                     android:id="@+id/progressBarCalories"
                     style="@android:style/Widget.ProgressBar.Horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:progress="90"
+                    android:layout_below="@+id/label_calories"
                     android:max="100"
+                    android:progress="90"
                     android:progressDrawable="@drawable/custom_progressbar_horizontal" />
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <TextView
                     android:id="@+id/label_carbohydrate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Carbohydrate : "
+                    android:layout_marginVertical="10dp"
                     android:fontFamily="@font/nlight"
-                    android:textSize="15sp"
+                    android:text="Carbohydrate : "
                     android:textColor="@color/white"
-                    android:layout_marginVertical="10dp"/>
+                    android:textSize="15sp" />
+
                 <TextView
                     android:id="@+id/carbohydrate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="10"
-                    android:fontFamily="@font/nlight"
-                    android:textSize="15sp"
-                    android:textColor="@color/white"
                     android:layout_marginVertical="10dp"
-                    android:layout_toRightOf="@+id/label_carbohydrate"/>
+                    android:layout_toRightOf="@+id/label_carbohydrate"
+                    android:fontFamily="@font/nlight"
+                    android:text="10"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
                 <TextView
                     android:id="@+id/unit_carbohydrate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="g"
-                    android:fontFamily="@font/nlight"
-                    android:textSize="15sp"
-                    android:textColor="@color/white"
                     android:layout_marginVertical="10dp"
-                    android:layout_toRightOf="@+id/carbohydrate"/>
+                    android:layout_toRightOf="@+id/carbohydrate"
+                    android:fontFamily="@font/nlight"
+                    android:text="g"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
                 <ProgressBar
-                    android:layout_below="@+id/label_carbohydrate"
                     android:id="@+id/progressBarCarbohydrate"
                     style="@android:style/Widget.ProgressBar.Horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:progress="15"
+                    android:layout_below="@+id/label_carbohydrate"
                     android:max="100"
+                    android:progress="15"
                     android:progressDrawable="@drawable/custom_progressbar_horizontal" />
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <TextView
                     android:id="@+id/label_protein"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Protein : "
+                    android:layout_marginVertical="10dp"
                     android:fontFamily="@font/nlight"
-                    android:textSize="15sp"
+                    android:text="Protein : "
                     android:textColor="@color/white"
-                    android:layout_marginVertical="10dp"/>
+                    android:textSize="15sp" />
+
                 <TextView
                     android:id="@+id/protein"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="10"
-                    android:fontFamily="@font/nlight"
-                    android:textSize="15sp"
-                    android:textColor="@color/white"
                     android:layout_marginVertical="10dp"
-                    android:layout_toRightOf="@+id/label_protein"/>
+                    android:layout_toRightOf="@+id/label_protein"
+                    android:fontFamily="@font/nlight"
+                    android:text="10"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
                 <TextView
                     android:id="@+id/unit_protein"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="g"
-                    android:fontFamily="@font/nlight"
-                    android:textSize="15sp"
-                    android:textColor="@color/white"
                     android:layout_marginVertical="10dp"
-                    android:layout_toRightOf="@+id/protein"/>
+                    android:layout_toRightOf="@+id/protein"
+                    android:fontFamily="@font/nlight"
+                    android:text="g"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
                 <ProgressBar
-                    android:layout_below="@+id/label_protein"
                     android:id="@+id/progressBarProtein"
                     style="@android:style/Widget.ProgressBar.Horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:progress="30"
+                    android:layout_below="@+id/label_protein"
                     android:max="100"
+                    android:progress="30"
                     android:progressDrawable="@drawable/custom_progressbar_horizontal" />
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <TextView
                     android:id="@+id/label_fat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fat : "
+                    android:layout_marginVertical="10dp"
                     android:fontFamily="@font/nlight"
-                    android:textSize="15sp"
+                    android:text="Fat : "
                     android:textColor="@color/white"
-                    android:layout_marginVertical="10dp"/>
+                    android:textSize="15sp" />
+
                 <TextView
                     android:id="@+id/fat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="26"
-                    android:fontFamily="@font/nlight"
-                    android:textSize="15sp"
-                    android:textColor="@color/white"
                     android:layout_marginVertical="10dp"
-                    android:layout_toRightOf="@+id/label_fat"/>
+                    android:layout_toRightOf="@+id/label_fat"
+                    android:fontFamily="@font/nlight"
+                    android:text="26"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
                 <TextView
                     android:id="@+id/unit_fat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="g"
-                    android:fontFamily="@font/nlight"
-                    android:textSize="15sp"
-                    android:textColor="@color/white"
                     android:layout_marginVertical="10dp"
-                    android:layout_toRightOf="@+id/fat"/>
+                    android:layout_toRightOf="@+id/fat"
+                    android:fontFamily="@font/nlight"
+                    android:text="g"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
                 <ProgressBar
-                    android:layout_below="@+id/label_fat"
                     android:id="@+id/progressBarFat"
                     style="@android:style/Widget.ProgressBar.Horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:progress="30"
+                    android:layout_below="@+id/label_fat"
                     android:max="100"
+                    android:progress="30"
                     android:progressDrawable="@drawable/custom_progressbar_horizontal" />
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <TextView
                     android:id="@+id/label_glucose"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Glucose : "
+                    android:layout_marginVertical="10dp"
                     android:fontFamily="@font/nlight"
-                    android:textSize="15sp"
+                    android:text="Glucose : "
                     android:textColor="@color/white"
-                    android:layout_marginVertical="10dp"/>
+                    android:textSize="15sp" />
+
                 <TextView
                     android:id="@+id/glucose"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="50"
-                    android:fontFamily="@font/nlight"
-                    android:textSize="15sp"
-                    android:textColor="@color/white"
                     android:layout_marginVertical="10dp"
-                    android:layout_toRightOf="@+id/label_glucose"/>
+                    android:layout_toRightOf="@+id/label_glucose"
+                    android:fontFamily="@font/nlight"
+                    android:text="50"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
                 <TextView
                     android:id="@+id/unit_glucose"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="g"
-                    android:fontFamily="@font/nlight"
-                    android:textSize="15sp"
-                    android:textColor="@color/white"
                     android:layout_marginVertical="10dp"
-                    android:layout_toRightOf="@+id/glucose"/>
+                    android:layout_toRightOf="@+id/glucose"
+                    android:fontFamily="@font/nlight"
+                    android:text="g"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
                 <ProgressBar
-                    android:layout_below="@+id/label_glucose"
                     android:id="@+id/progressBarGlucose"
                     style="@android:style/Widget.ProgressBar.Horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:progress="30"
+                    android:layout_below="@+id/label_glucose"
                     android:max="100"
+                    android:progress="30"
                     android:progressDrawable="@drawable/custom_progressbar_horizontal" />
 
             </RelativeLayout>
-
 
 
         </LinearLayout>

@@ -2,112 +2,129 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/register"
-    tools:context=".RegisterActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background1"
     android:orientation="vertical"
     android:paddingHorizontal="15dp"
     android:paddingTop="20dp"
-    android:background="@drawable/background1">
+    tools:context=".RegisterActivity">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome!"
+        android:layout_gravity="center"
         android:fontFamily="@font/nbold"
+        android:text="Welcome!"
         android:textColor="@color/white"
-        android:textSize="25sp"
-        android:layout_gravity="center"/>
+        android:textSize="25sp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create your account"
-        android:fontFamily="@font/nregular"
-        android:textColor="@color/white"
-        android:textSize="15sp"
+        android:layout_gravity="center"
         android:layout_marginVertical="10dp"
-        android:layout_gravity="center"/>
+        android:fontFamily="@font/nregular"
+        android:text="Create your account"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="400dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Account"
-                android:fontFamily="@font/nregular"
-                android:textColor="@color/white"
-                android:textSize="15sp"
                 android:layout_marginTop="15dp"
-                android:textAlignment="textStart"/>
+                android:fontFamily="@font/nregular"
+                android:text="Account"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="Fullname"/>
+                android:hint="Fullname" />
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="Username"
-                android:layout_marginVertical="15dp"/>
+                android:layout_marginVertical="15dp"
+                android:hint="Username" />
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="Email"/>
+                android:hint="Email" />
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="Password"
-                android:layout_marginVertical="15dp"/>
+                android:layout_marginVertical="15dp"
+                android:hint="Password" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fill Your Body Data"
                 android:fontFamily="@font/nregular"
+                android:text="Fill Your Body Data"
+                android:textAlignment="textStart"
                 android:textColor="@color/white"
-                android:textSize="15sp"
-                android:textAlignment="textStart"/>
+                android:textSize="15sp" />
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="Gender"/>
+                android:hint="Gender" />
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="Birth Date"
-                android:layout_marginVertical="15dp"/>
+                android:layout_marginVertical="15dp"
+                android:hint="Birth Date" />
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="Allergies"/>
+                android:hint="Allergies" />
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="Height"
-                android:layout_marginVertical="15dp"/>
+                android:layout_marginVertical="15dp"
+                android:hint="Height" />
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="Weight"/>
+                android:hint="Weight" />
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="Bloodtypes"
-                android:layout_marginVertical="15dp"/>
+                android:layout_marginVertical="15dp"
+                android:hint="Bloodtypes" />
 
         </LinearLayout>
 
     </ScrollView>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Sign In"
-        android:fontFamily="@font/nbold"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="20sp"
+        android:layout_marginVertical="15dp"
         android:background="@drawable/custom_button"
+        android:fontFamily="@font/nbold"
+        android:text="Sign In"
         android:textAllCaps="false"
-        android:layout_marginVertical="15dp"/>
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 </LinearLayout>

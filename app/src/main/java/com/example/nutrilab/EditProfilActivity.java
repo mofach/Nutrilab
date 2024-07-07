@@ -13,6 +13,7 @@ public class EditProfilActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editprofil);
+
         // Temukan ImageView di layout
         ImageView profileImageView = findViewById(R.id.img_profile);
 

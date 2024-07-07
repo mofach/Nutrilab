@@ -6,25 +6,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".SplashscreenActivity"
+    android:gravity="center"
     android:orientation="vertical"
-    android:gravity="center">
+    tools:context=".SplashscreenActivity">
 
     <ImageView
         android:layout_width="300dp"
         android:layout_height="200dp"
-        android:src="@drawable/logo"/>
+        android:src="@drawable/logo" />
+
     <ProgressBar
         android:layout_width="75dp"
-        android:layout_height="75dp"/>
+        android:layout_height="75dp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nutrilab 2024. All rights reserved"
-        android:fontFamily="@font/nbold"
-        android:textSize="15sp"
         android:layout_marginTop="250dp"
-        android:textColor="@color/teal_green"/>
+        android:fontFamily="@font/nbold"
+        android:text="Nutrilab 2024. All rights reserved"
+        android:textColor="@color/teal_green"
+        android:textSize="15sp" />
 
 
 </LinearLayout>
