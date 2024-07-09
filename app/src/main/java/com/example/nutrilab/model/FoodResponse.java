@@ -30,68 +30,137 @@ public class FoodResponse {
     }
 
     public class FoodData {
-        private String foodName;
-        private String foodInformation;
-        private String calorie;
-        private String sugar;
-        private String carbohydrate;
-        private String fat;
-        private String protein;
+        private FoodInfo foodInfo;
+        private ProgressNutrition progressNutrition;
 
-        public String getFoodName() {
-            return foodName;
+        public FoodInfo getFoodInfo() {
+            return foodInfo;
         }
 
-        public void setFoodName(String foodName) {
-            this.foodName = foodName;
+        public void setFoodInfo(FoodInfo foodInfo) {
+            this.foodInfo = foodInfo;
         }
 
-        public String getFoodInformation() {
-            return foodInformation;
+        public ProgressNutrition getProgressNutrition() {
+            return progressNutrition;
         }
 
-        public void setFoodInformation(String foodInformation) {
-            this.foodInformation = foodInformation;
+        public void setProgressNutrition(ProgressNutrition progressNutrition) {
+            this.progressNutrition = progressNutrition;
         }
 
-        public String getCalorie() {
-            return calorie;
+        public class FoodInfo {
+            private String foodName;
+            private String foodInformation;
+            private String calorie;
+            private String sugar;
+            private String carbohydrate;
+            private String fat;
+            private String protein;
+
+            public String getFoodName() {
+                return foodName;
+            }
+
+            public void setFoodName(String foodName) {
+                this.foodName = foodName;
+            }
+
+            public String getFoodInformation() {
+                return foodInformation;
+            }
+
+            public void setFoodInformation(String foodInformation) {
+                this.foodInformation = foodInformation;
+            }
+
+            public String getCalorie() {
+                return calorie;
+            }
+
+            public void setCalorie(String calorie) {
+                this.calorie = calorie;
+            }
+
+            public String getSugar() {
+                return sugar;
+            }
+
+            public void setSugar(String sugar) {
+                this.sugar = sugar;
+            }
+
+            public String getCarbohydrate() {
+                return carbohydrate;
+            }
+
+            public void setCarbohydrate(String carbohydrate) {
+                this.carbohydrate = carbohydrate;
+            }
+
+            public String getFat() {
+                return fat;
+            }
+
+            public void setFat(String fat) {
+                this.fat = fat;
+            }
+
+            public String getProtein() {
+                return protein;
+            }
+
+            public void setProtein(String protein) {
+                this.protein = protein;
+            }
         }
 
-        public void setCalorie(String calorie) {
-            this.calorie = calorie;
-        }
+        public class ProgressNutrition {
+            private int totalCalories;
+            private int totalCarbohydrate;
+            private int totalProtein;
+            private int totalFat;
+            private int totalSugar;
 
-        public String getSugar() {
-            return sugar;
-        }
+            public int getTotalCalories() {
+                return totalCalories;
+            }
 
-        public void setSugar(String sugar) {
-            this.sugar = sugar;
-        }
+            public void setTotalCalories(int totalCalories) {
+                this.totalCalories = totalCalories;
+            }
 
-        public String getCarbohydrate() {
-            return carbohydrate;
-        }
+            public int getTotalCarbohydrate() {
+                return totalCarbohydrate;
+            }
 
-        public void setCarbohydrate(String carbohydrate) {
-            this.carbohydrate = carbohydrate;
-        }
+            public void setTotalCarbohydrate(int totalCarbohydrate) {
+                this.totalCarbohydrate = totalCarbohydrate;
+            }
 
-        public String getFat() {
-            return fat;
-        }
+            public int getTotalProtein() {
+                return totalProtein;
+            }
 
-        public void setFat(String fat) {
-            this.fat = fat;
-        }
+            public void setTotalProtein(int totalProtein) {
+                this.totalProtein = totalProtein;
+            }
 
-        public String getProtein() {
-            return protein;
-        }
+            public int getTotalFat() {
+                return totalFat;
+            }
 
-        public void setProtein(String protein) {
-            this.protein = protein;
+            public void setTotalFat(int totalFat) {
+                this.totalFat = totalFat;
+            }
+
+            public int getTotalSugar() {
+                return totalSugar;
+            }
+
+            public void setTotalSugar(int totalSugar) {
+                this.totalSugar = totalSugar;
+            }
         }
     }
 }

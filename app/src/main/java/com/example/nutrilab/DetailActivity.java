@@ -1,6 +1,7 @@
 package com.example.nutrilab;
 
 import android.os.Bundle;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -8,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class DetailActivity extends AppCompatActivity {
     private TextView txtFoodName, txtFoodInformation, txtCalorie, txtSugar, txtCarbo, txtFat, txtProtein;
+    private ProgressBar progressCalories, progressCarbo, progressProtein, progressFat, progressSugar;
     private void initUI(){
         txtFoodName = findViewById(R.id.txt_food_name);
         txtFoodInformation = findViewById(R.id.txt_food_information);
@@ -16,6 +18,12 @@ public class DetailActivity extends AppCompatActivity {
         txtCarbo = findViewById(R.id.carbohydrate);
         txtFat = findViewById(R.id.fat);
         txtProtein = findViewById(R.id.protein);
+
+        progressCalories = findViewById(R.id.progressBarCalories);
+        progressCarbo = findViewById(R.id.progressBarCarbohydrate);
+        progressProtein = findViewById(R.id.progressBarProtein);
+        progressFat = findViewById(R.id.progressBarFat);
+        progressSugar = findViewById(R.id.progressBarGlucose);
     }
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
