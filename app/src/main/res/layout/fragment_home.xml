@@ -207,27 +207,43 @@
 
             <LinearLayout
                 android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <ProgressBar
                     android:id="@+id/pb_calories"
                     style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:progress="50"
+                    android:max="100"
+                    android:layout_marginHorizontal="4dp"
                     android:background="@drawable/circle_shape_progress"
                     android:indeterminate="false"
                     android:progressDrawable="@drawable/circular_progress_bar"
                     android:textAlignment="center" />
 
-                <TextView
-                    android:id="@+id/calories"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/nregular"
-                    android:text="100/100kkal"
-                    android:textSize="10sp" />
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/txt_progress_calories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nregular"
+                        android:text="100/"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:id="@+id/txt_total_calories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nregular"
+                        android:text="100kkal"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -239,27 +255,39 @@
 
             <LinearLayout
                 android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <ProgressBar
                     android:id="@+id/pb_carbohydrates"
                     style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:background="@drawable/circle_shape_progress"
                     android:indeterminate="false"
                     android:progressDrawable="@drawable/circular_progress_bar"
                     android:textAlignment="center" />
 
-                <TextView
-                    android:id="@+id/carbohydrates"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/nregular"
-                    android:text="100/100g"
-                    android:textSize="10sp" />
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/txt_progress_carbo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nregular"
+                        android:text="100/"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:id="@+id/txt_total_carbo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nregular"
+                        android:text="100g"
+                        android:textSize="10sp" />
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -271,27 +299,39 @@
 
             <LinearLayout
                 android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <ProgressBar
                     android:id="@+id/pb_proteins"
                     style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:background="@drawable/circle_shape_progress"
                     android:indeterminate="false"
                     android:progressDrawable="@drawable/circular_progress_bar"
                     android:textAlignment="center" />
 
-                <TextView
-                    android:id="@+id/proteins"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/nregular"
-                    android:text="100/100g"
-                    android:textSize="10sp" />
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/txt_progress_protein"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nregular"
+                        android:text="100/"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:id="@+id/txt_total_protein"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nregular"
+                        android:text="100g"
+                        android:textSize="10sp" />
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -303,27 +343,39 @@
 
             <LinearLayout
                 android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <ProgressBar
                     android:id="@+id/pb_fat"
                     style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:background="@drawable/circle_shape_progress"
                     android:indeterminate="false"
                     android:progressDrawable="@drawable/circular_progress_bar"
                     android:textAlignment="center" />
 
-                <TextView
-                    android:id="@+id/fat"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/nregular"
-                    android:text="100/100kkal"
-                    android:textSize="10sp" />
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/txt_progress_fat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nregular"
+                        android:text="100/"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:id="@+id/txt_total_fat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nregular"
+                        android:text="100kkal"
+                        android:textSize="10sp" />
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -335,27 +387,39 @@
 
             <LinearLayout
                 android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <ProgressBar
                     android:id="@+id/pb_glucose"
                     style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:background="@drawable/circle_shape_progress"
                     android:indeterminate="false"
                     android:progressDrawable="@drawable/circular_progress_bar"
                     android:textAlignment="center" />
 
-                <TextView
-                    android:id="@+id/glucose"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/nregular"
-                    android:text="100/100g"
-                    android:textSize="10sp" />
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/txt_progress_sugar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nregular"
+                        android:text="100/"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:id="@+id/txt_total_sugar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nregular"
+                        android:text="100g"
+                        android:textSize="10sp" />
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
