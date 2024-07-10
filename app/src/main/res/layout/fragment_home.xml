@@ -446,11 +446,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="4dp"
             android:orientation="vertical">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:elevation="4dp"
                 android:background="@drawable/custom_background3"
                 android:padding="10dp">
 
@@ -625,6 +627,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:elevation="4dp"
                 android:background="@drawable/custom_background3"
                 android:padding="10dp">
 
@@ -799,6 +802,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:elevation="4dp"
                 android:background="@drawable/custom_background3"
                 android:padding="10dp">
 
