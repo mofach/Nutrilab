@@ -64,7 +64,6 @@
             android:layout_toRightOf="@id/img_profile"
             android:fontFamily="@font/nbold"
             android:paddingHorizontal="15dp"
-            android:text="Azizi Shafa Asadel"
             android:textColor="@color/white"
             android:textSize="20sp" />
 
@@ -83,7 +82,6 @@
             android:layout_toRightOf="@id/img_profile"
             android:fontFamily="@font/nregular"
             android:paddingHorizontal="15dp"
-            android:text="yourmail@gmail.com"
             android:textColor="@color/white"
             android:textSize="15sp" />
 
@@ -116,7 +114,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nregular"
-                    android:text="170"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -144,7 +141,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nregular"
-                    android:text="60"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 

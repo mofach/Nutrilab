@@ -2,6 +2,7 @@ package com.example.nutrilab;
 
 import com.example.nutrilab.model.FoodRequest;
 import com.example.nutrilab.model.FoodResponse;
+import com.example.nutrilab.model.ProfileResponse;
 import com.example.nutrilab.model.ProgressNutritionResponse;
 import com.example.nutrilab.model.TotalNutritionResponse;
 
@@ -20,4 +21,7 @@ public interface ApiService {
 
     @GET("/profile/nutrition/progress/{userId}")
     Call<ProgressNutritionResponse> getProgressNutrition(@Path("userId") String userId);
+
+    @GET("/profile/{userId}")
+    Call<ProfileResponse> getProfileUser(@Path("userId") String userId);
 }

@@ -19,6 +19,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.nutrilab.model.FoodRequest;
 import com.example.nutrilab.model.FoodResponse;
+import com.example.nutrilab.model.ProfileResponse;
 import com.example.nutrilab.model.ProgressNutritionResponse;
 import com.example.nutrilab.model.TotalNutritionResponse;
 import com.google.android.material.imageview.ShapeableImageView;
@@ -34,7 +35,7 @@ public class HomeFragment extends Fragment {
     private EditText editFood;
     private ShapeableImageView btnSend;
     private ProgressDialog progressDialog;
-    private TextView txtProgresCalorie, txtTotalCalorie, txtProgresCarbo, txtTotalCarbo, txtProgresProtein, txtTotalProtein, txtProgresFat, txtTotalFat, txtProgresSugar, txtTotalSugar;
+    private TextView txtProgresCalorie, txtTotalCalorie, txtProgresCarbo, txtTotalCarbo, txtProgresProtein, txtTotalProtein, txtProgresFat, txtTotalFat, txtProgresSugar, txtTotalSugar, txtFullname, txtEmail, txtHeight, txtWeight;
     private ProgressBar pbCalories, pbCarbo, pbProtein, pbFat, pbSugar;
 
     private void initUI(View view) {
@@ -55,6 +56,10 @@ public class HomeFragment extends Fragment {
         txtTotalProtein = view.findViewById(R.id.txt_total_protein);
         txtTotalFat = view.findViewById(R.id.txt_total_fat);
         txtTotalSugar = view.findViewById(R.id.txt_total_sugar);
+        txtFullname = view.findViewById(R.id.fullname);
+        txtEmail = view.findViewById(R.id.email);
+        txtWeight = view.findViewById(R.id.weight);
+        txtHeight = view.findViewById(R.id.height);
     }
 
     @Nullable
@@ -75,8 +80,37 @@ public class HomeFragment extends Fragment {
 
         getProgress();
         getTotalProgress();
+        getProfileUser();
 
         return view;
+    }
+
+    private void getProfileUser() {
+        String userId = "5fb3aa47-f976-4781-9c95-a6e65e8d9194";
+        ApiService apiService = RetrofitClient.getApiService();
+        Call<ProfileResponse> call = apiService.getProfileUser(userId);
+
+        call.enqueue(new Callback<ProfileResponse>() {
+            @Override
+            public void onResponse(Call<ProfileResponse> call, Response<ProfileResponse> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    ProfileResponse.ProfileData profileData = response.body().getData();
+                    txtFullname.setText(profileData.getUser().getName());
+                    txtEmail.setText(profileData.getUser().getEmail());
+                    txtWeight.setText(String.valueOf(profileData.getWeight()));
+                    txtHeight.setText(String.valueOf(profileData.getHeight()));
+
+                }else {
+                    Toast.makeText(getActivity(), "Failed to retrieve nutrition information", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ProfileResponse> call, Throwable t) {
+                Log.e("HomeFragment", "onFailure: " + t.getMessage());
+                Toast.makeText(getActivity(), "Request failed", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

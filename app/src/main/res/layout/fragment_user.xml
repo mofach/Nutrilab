@@ -30,10 +30,10 @@
                 app:shapeAppearanceOverlay="@style/roundedImageView" />
 
             <TextView
+                android:id="@+id/user_fullname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nbold"
-                android:text="Azizi Shafa Asadel"
                 android:textColor="@color/black"
                 android:textSize="25sp" />
         </LinearLayout>
@@ -71,12 +71,13 @@
                         android:src="@drawable/outline_badge_24" />
 
                     <TextView
+                        android:id="@+id/user_username"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/nregular"
                         android:gravity="center_vertical"
                         android:padding="5dp"
-                        android:text="username"
+
                         android:textColor="#40A578"
                         android:textSize="20sp" />
                 </LinearLayout>
@@ -97,12 +98,12 @@
                         android:src="@drawable/outline_email_24" />
 
                     <TextView
+                        android:id="@+id/user_email"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/nregular"
                         android:gravity="center_vertical"
                         android:padding="5dp"
-                        android:text="yourmail@email.com"
                         android:textColor="#40A578"
                         android:textSize="20sp" />
                 </LinearLayout>
@@ -130,12 +131,12 @@
                         android:src="@drawable/outline_female_24" />
 
                     <TextView
+                        android:id="@+id/user_gender"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/nregular"
                         android:gravity="center_vertical"
                         android:padding="5dp"
-                        android:text="Female"
                         android:textColor="#40A578"
                         android:textSize="20sp" />
                 </LinearLayout>
@@ -156,12 +157,12 @@
                         android:src="@drawable/outline_cake_24" />
 
                     <TextView
+                        android:id="@+id/user_dob"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/nregular"
                         android:gravity="center_vertical"
                         android:padding="5dp"
-                        android:text="16 May 2004"
                         android:textColor="#40A578"
                         android:textSize="20sp" />
                 </LinearLayout>
@@ -181,12 +182,12 @@
                         android:src="@drawable/outline_coronavirus_24" />
 
                     <TextView
+                        android:id="@+id/user_allergies"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/nregular"
                         android:gravity="center_vertical"
                         android:padding="5dp"
-                        android:text="No"
                         android:textColor="#40A578"
                         android:textSize="20sp" />
                 </LinearLayout>
@@ -207,12 +208,12 @@
                         android:src="@drawable/outline_height_24" />
 
                     <TextView
+                        android:id="@+id/user_height"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/nregular"
                         android:gravity="center_vertical"
                         android:padding="5dp"
-                        android:text="170cm"
                         android:textColor="#40A578"
                         android:textSize="20sp" />
                 </LinearLayout>
@@ -232,12 +233,12 @@
                         android:src="@drawable/outline_balance_24" />
 
                     <TextView
+                        android:id="@+id/user_weight"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/nregular"
                         android:gravity="center_vertical"
                         android:padding="5dp"
-                        android:text="60kg"
                         android:textColor="#40A578"
                         android:textSize="20sp" />
                 </LinearLayout>
