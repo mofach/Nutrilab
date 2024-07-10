@@ -22,14 +22,14 @@ public class FoodResponse {
 
     public class FoodData {
         private FoodInfo foodInfo;
-        private ProgressNutrition progressNutrition;
+        private totalNutritionNeeded totalNutritionNeeded;
 
         public FoodInfo getFoodInfo() {
             return foodInfo;
         }
 
-        public ProgressNutrition getProgressNutrition() {
-            return progressNutrition;
+        public totalNutritionNeeded getTotalNutritionNeeded() {
+            return totalNutritionNeeded;
         }
 
         public class FoodInfo {
@@ -70,7 +70,7 @@ public class FoodResponse {
             }
         }
 
-        public class ProgressNutrition {
+        public class totalNutritionNeeded {
             private int totalCalories;
             private int totalCarbohydrate;
             private int totalProtein;

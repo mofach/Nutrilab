@@ -1,8 +1,11 @@
 package com.example.nutrilab;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,22 +33,32 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         initUI();
-        // Terima data dari Intent
-        String foodName = getIntent().getStringExtra("foodName");
-        String foodInformation = getIntent().getStringExtra("foodInformation");
-        String calorie = getIntent().getStringExtra("calorie");
-        String sugar = getIntent().getStringExtra("sugar");
-        String carbohydrate = getIntent().getStringExtra("carbohydrate");
-        String fat = getIntent().getStringExtra("fat");
-        String protein = getIntent().getStringExtra("protein");
+        Intent intent = getIntent();
+        if (intent != null) {
+            String foodName = intent.getStringExtra("foodName");
+            String foodInformation = intent.getStringExtra("foodInformation");
+            String calorie = intent.getStringExtra("calorie");
+            String sugar = intent.getStringExtra("sugar");
+            String carbohydrate = intent.getStringExtra("carbohydrate");
+            String fat = intent.getStringExtra("fat");
+            String protein = intent.getStringExtra("protein");
 
-        // Tampilkan data pada TextView
-        txtFoodName.setText(foodName);
-        txtFoodInformation.setText(foodInformation);
-        txtCalorie.setText(calorie);
-        txtSugar.setText(sugar);
-        txtCarbo.setText(carbohydrate);
-        txtFat.setText(fat);
-        txtProtein.setText(protein);
+//            int totalCalories = intent.getIntExtra("totalCalories", 0);
+//            int totalCarbohydrate = intent.getIntExtra("totalCarbohydrate", 0);
+//            int totalProtein = intent.getIntExtra("totalProtein", 0);
+//            int totalFat = intent.getIntExtra("totalFat", 0);
+//            int totalSugar = intent.getIntExtra("totalSugar", 0);
+
+            txtFoodName.setText(foodName);
+            txtFoodInformation.setText(foodInformation);
+            txtCalorie.setText(calorie);
+            txtSugar.setText(sugar);
+            txtCarbo.setText(carbohydrate);
+            txtFat.setText(fat);
+            txtProtein.setText(protein);
+
+        } else {
+            Toast.makeText(this, "null", Toast.LENGTH_SHORT).show();
+        }
     }
 }

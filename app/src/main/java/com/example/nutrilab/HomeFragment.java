@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,9 +35,10 @@ import retrofit2.Response;
 public class HomeFragment extends Fragment {
 
     private EditText editFood;
+    private RelativeLayout layoutRekomendasi1, layoutRekomendasi2, layoutRekomendasi3;
     private ShapeableImageView btnSend;
     private ProgressDialog progressDialog;
-    private TextView txtProgresCalorie, txtTotalCalorie, txtProgresCarbo, txtTotalCarbo, txtProgresProtein, txtTotalProtein, txtProgresFat, txtTotalFat, txtProgresSugar, txtTotalSugar, txtFullname, txtEmail, txtHeight, txtWeight, rFoodName1, rFoodName2, rFoodName3, rCalorie1, rCalorie2, rCalorie3, rCarbo1, rCarbo2, rCarbo3, rProtein1, rProtein2, rProtein3, rFat1, rFat2, rFat3, rSugar1, rSugar2, rSugar3;
+    private TextView txtProgresCalorie, txtTotalCalorie, txtProgresCarbo, txtTotalCarbo, txtProgresProtein, txtTotalProtein, txtProgresFat, txtTotalFat, txtProgresSugar, txtTotalSugar, txtFullname, txtEmail, txtHeight, txtWeight, rFoodName1, rFoodName2, rFoodName3, rCalorie1, rCalorie2, rCalorie3, rCarbo1, rCarbo2, rCarbo3, rProtein1, rProtein2, rProtein3, rFat1, rFat2, rFat3, rSugar1, rSugar2, rSugar3, rInfo1, rInfo2, rInfo3;
     private ProgressBar pbCalories, pbCarbo, pbProtein, pbFat, pbSugar;
 
     private void initUI(View view) {
@@ -79,6 +81,12 @@ public class HomeFragment extends Fragment {
         rSugar1 = view.findViewById(R.id.glucose1);
         rSugar2 = view.findViewById(R.id.glucose2);
         rSugar3 = view.findViewById(R.id.glucose3);
+        rInfo1 = view.findViewById(R.id.food_info1);
+        rInfo2 = view.findViewById(R.id.food_info3);
+        rInfo3 = view.findViewById(R.id.food_info3);
+        layoutRekomendasi1 = view.findViewById(R.id.layout_rekomendasi1);
+        layoutRekomendasi2 = view.findViewById(R.id.layout_rekomendasi2);
+        layoutRekomendasi3 = view.findViewById(R.id.layout_rekomendasi3);
     }
 
     @Nullable
@@ -95,6 +103,69 @@ public class HomeFragment extends Fragment {
         btnSend.setOnClickListener(v -> {
             String food = editFood.getText().toString();
             trackFood(food);
+        });
+
+        layoutRekomendasi1.setOnClickListener(v -> {
+            String foodName = rFoodName1.getText().toString();
+            String foodInformation = rInfo1.getText().toString();
+            String calorie = rCalorie1.getText().toString();
+            String sugar = rSugar1.getText().toString();
+            String carbohydrate = rCarbo1.getText().toString();
+            String fat = rFat1.getText().toString();
+            String protein = rProtein1.getText().toString();
+
+            Intent intent = new Intent(getActivity(), DetailActivity.class);
+            intent.putExtra("foodName", foodName);
+            intent.putExtra("foodInformation", foodInformation);
+            intent.putExtra("calorie", calorie);
+            intent.putExtra("sugar", sugar);
+            intent.putExtra("carbohydrate", carbohydrate);
+            intent.putExtra("fat", fat);
+            intent.putExtra("protein", protein);
+
+            startActivity(intent);
+        });
+
+        layoutRekomendasi2.setOnClickListener(v -> {
+            String foodName = rFoodName2.getText().toString();
+            String foodInformation = rInfo2.getText().toString();
+            String calorie = rCalorie2.getText().toString();
+            String sugar = rSugar2.getText().toString();
+            String carbohydrate = rCarbo2.getText().toString();
+            String fat = rFat2.getText().toString();
+            String protein = rProtein2.getText().toString();
+
+            Intent intent = new Intent(getActivity(), DetailActivity.class);
+            intent.putExtra("foodName", foodName);
+            intent.putExtra("foodInformation", foodInformation);
+            intent.putExtra("calorie", calorie);
+            intent.putExtra("sugar", sugar);
+            intent.putExtra("carbohydrate", carbohydrate);
+            intent.putExtra("fat", fat);
+            intent.putExtra("protein", protein);
+
+            startActivity(intent);
+        });
+
+        layoutRekomendasi3.setOnClickListener(v -> {
+            String foodName = rFoodName3.getText().toString();
+            String foodInformation = rInfo3.getText().toString();
+            String calorie = rCalorie3.getText().toString();
+            String sugar = rSugar3.getText().toString();
+            String carbohydrate = rCarbo3.getText().toString();
+            String fat = rFat3.getText().toString();
+            String protein = rProtein3.getText().toString();
+
+            Intent intent = new Intent(getActivity(), DetailActivity.class);
+            intent.putExtra("foodName", foodName);
+            intent.putExtra("foodInformation", foodInformation);
+            intent.putExtra("calorie", calorie);
+            intent.putExtra("sugar", sugar);
+            intent.putExtra("carbohydrate", carbohydrate);
+            intent.putExtra("fat", fat);
+            intent.putExtra("protein", protein);
+
+            startActivity(intent);
         });
 
         getProgress();
@@ -140,6 +211,12 @@ public class HomeFragment extends Fragment {
                         rProtein3.setText(food3.getProtein());
                         rFat3.setText(food3.getFat());
                         rSugar3.setText(food3.getSugar());
+
+                        rInfo1.setText(food1.getInformation());
+                        rInfo2.setText(food2.getInformation());
+                        rInfo3.setText(food3.getInformation());
+
+
                     } else {
                         Toast.makeText(getActivity(), "No food recommendations available", Toast.LENGTH_SHORT).show();
                     }
@@ -272,7 +349,7 @@ public class HomeFragment extends Fragment {
                 if (response.isSuccessful()) {
                     FoodResponse.FoodData foodData = response.body().getData();
                     FoodResponse.FoodData.FoodInfo foodInfo = foodData.getFoodInfo();
-                    FoodResponse.FoodData.ProgressNutrition progressNutrition = foodData.getProgressNutrition();
+                    FoodResponse.FoodData.totalNutritionNeeded progressNutrition = foodData.getTotalNutritionNeeded();
 
                     Intent intent = new Intent(getActivity(), DetailActivity.class);
                     intent.putExtra("foodName", foodInfo.getFoodName());
