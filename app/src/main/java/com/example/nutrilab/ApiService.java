@@ -1,5 +1,6 @@
 package com.example.nutrilab;
 
+import com.example.nutrilab.model.FoodRecomendation;
 import com.example.nutrilab.model.FoodRequest;
 import com.example.nutrilab.model.FoodResponse;
 import com.example.nutrilab.model.ProfileResponse;
@@ -24,4 +25,7 @@ public interface ApiService {
 
     @GET("/profile/{userId}")
     Call<ProfileResponse> getProfileUser(@Path("userId") String userId);
+
+    @GET("/food/recommendation/{userId}")
+    Call<FoodRecomendation> getRecommendation(@Path("userId") String userId);
 }

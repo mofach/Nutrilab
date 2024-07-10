@@ -17,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.nutrilab.model.FoodRecomendation;
 import com.example.nutrilab.model.FoodRequest;
 import com.example.nutrilab.model.FoodResponse;
 import com.example.nutrilab.model.ProfileResponse;
@@ -35,7 +36,7 @@ public class HomeFragment extends Fragment {
     private EditText editFood;
     private ShapeableImageView btnSend;
     private ProgressDialog progressDialog;
-    private TextView txtProgresCalorie, txtTotalCalorie, txtProgresCarbo, txtTotalCarbo, txtProgresProtein, txtTotalProtein, txtProgresFat, txtTotalFat, txtProgresSugar, txtTotalSugar, txtFullname, txtEmail, txtHeight, txtWeight;
+    private TextView txtProgresCalorie, txtTotalCalorie, txtProgresCarbo, txtTotalCarbo, txtProgresProtein, txtTotalProtein, txtProgresFat, txtTotalFat, txtProgresSugar, txtTotalSugar, txtFullname, txtEmail, txtHeight, txtWeight, rFoodName1, rFoodName2, rFoodName3, rCalorie1, rCalorie2, rCalorie3, rCarbo1, rCarbo2, rCarbo3, rProtein1, rProtein2, rProtein3, rFat1, rFat2, rFat3, rSugar1, rSugar2, rSugar3;
     private ProgressBar pbCalories, pbCarbo, pbProtein, pbFat, pbSugar;
 
     private void initUI(View view) {
@@ -60,6 +61,24 @@ public class HomeFragment extends Fragment {
         txtEmail = view.findViewById(R.id.email);
         txtWeight = view.findViewById(R.id.weight);
         txtHeight = view.findViewById(R.id.height);
+        rFoodName1 = view.findViewById(R.id.food_name1);
+        rFoodName2 = view.findViewById(R.id.food_name2);
+        rFoodName3 = view.findViewById(R.id.food_name3);
+        rCalorie1 = view.findViewById(R.id.calories1);
+        rCalorie2 = view.findViewById(R.id.calories2);
+        rCalorie3 = view.findViewById(R.id.calories3);
+        rCarbo1 = view.findViewById(R.id.carbohydrates1);
+        rCarbo2 = view.findViewById(R.id.carbohydrates2);
+        rCarbo3 = view.findViewById(R.id.carbohydrates3);
+        rProtein1 = view.findViewById(R.id.proteins1);
+        rProtein2 = view.findViewById(R.id.proteins2);
+        rProtein3 = view.findViewById(R.id.proteins3);
+        rFat1 = view.findViewById(R.id.fat1);
+        rFat2 = view.findViewById(R.id.fat2);
+        rFat3 = view.findViewById(R.id.fat3);
+        rSugar1 = view.findViewById(R.id.glucose1);
+        rSugar2 = view.findViewById(R.id.glucose2);
+        rSugar3 = view.findViewById(R.id.glucose3);
     }
 
     @Nullable
@@ -81,8 +100,57 @@ public class HomeFragment extends Fragment {
         getProgress();
         getTotalProgress();
         getProfileUser();
+        getRecommendation();
 
         return view;
+    }
+
+    private void getRecommendation() {
+        String userId = "5fb3aa47-f976-4781-9c95-a6e65e8d9194";
+        ApiService apiService = RetrofitClient.getApiService();
+        Call<FoodRecomendation> call = apiService.getRecommendation(userId);
+
+        call.enqueue(new Callback<FoodRecomendation>() {
+            @Override
+            public void onResponse(Call<FoodRecomendation> call, Response<FoodRecomendation> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    FoodRecomendation foodRecomendation = response.body();
+                    if (foodRecomendation != null && foodRecomendation.getData() != null) {
+                        FoodRecomendation.FoodData food1 = foodRecomendation.getData().getFood1();
+                        FoodRecomendation.FoodData food2 = foodRecomendation.getData().getFood2();
+                        FoodRecomendation.FoodData food3 = foodRecomendation.getData().getFood3();
+
+                        rFoodName1.setText(food1.getFoodName());
+                        rCalorie1.setText(food1.getCalorie());
+                        rCarbo1.setText(food1.getCarbohydrate());
+                        rProtein1.setText(food1.getProtein());
+                        rFat1.setText(food1.getFat());
+                        rSugar1.setText(food1.getSugar());
+
+                        rFoodName2.setText(food2.getFoodName());
+                        rCalorie2.setText(food2.getCalorie());
+                        rCarbo2.setText(food2.getCarbohydrate());
+                        rProtein2.setText(food2.getProtein());
+                        rFat2.setText(food2.getFat());
+                        rSugar2.setText(food2.getSugar());
+
+                        rFoodName3.setText(food3.getFoodName());
+                        rCalorie3.setText(food3.getCalorie());
+                        rCarbo3.setText(food3.getCarbohydrate());
+                        rProtein3.setText(food3.getProtein());
+                        rFat3.setText(food3.getFat());
+                        rSugar3.setText(food3.getSugar());
+                    } else {
+                        Toast.makeText(getActivity(), "No food recommendations available", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<FoodRecomendation> call, Throwable t) {
+
+            }
+        });
     }
 
     private void getProfileUser() {

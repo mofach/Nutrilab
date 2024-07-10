@@ -488,7 +488,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nlight"
-                        android:text="50"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -521,7 +520,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nlight"
-                        android:text="75"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -553,7 +551,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nlight"
-                        android:text="80"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -586,7 +583,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nlight"
-                        android:text="30"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -619,7 +615,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nlight"
-                        android:text="10"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -645,7 +640,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nbold"
-                    android:text="Salad Buah"
                     android:textColor="@color/black"
                     android:textSize="15dp" />
 
@@ -668,7 +662,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nlight"
-                        android:text="50"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -701,7 +694,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nlight"
-                        android:text="75"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -733,7 +725,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nlight"
-                        android:text="80"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -766,7 +757,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nlight"
-                        android:text="30"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -799,7 +789,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nlight"
-                        android:text="10"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -825,7 +814,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nbold"
-                    android:text="Salad Buah"
                     android:textColor="@color/black"
                     android:textSize="15dp" />
 
@@ -848,7 +836,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nlight"
-                        android:text="50"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -881,7 +868,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nlight"
-                        android:text="75"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -913,7 +899,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nlight"
-                        android:text="80"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -946,7 +931,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nlight"
-                        android:text="30"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -979,7 +963,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nlight"
-                        android:text="10"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
