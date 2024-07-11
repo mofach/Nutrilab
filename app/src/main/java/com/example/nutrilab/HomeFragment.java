@@ -225,7 +225,8 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onFailure(Call<FoodRecomendation> call, Throwable t) {
-
+                Log.e("HomeFragment", "onFailure: " + t.getMessage());
+                Toast.makeText(getActivity(), "Request failed", Toast.LENGTH_SHORT).show();
             }
         });
     }

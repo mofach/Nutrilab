@@ -7,19 +7,24 @@
     android:padding="10dp">
 
     <TextView
-        android:id="@+id/food_name"
+        android:id="@+id/tvfood_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nbold"
         android:text="Salad Buah"
         android:textColor="@color/black"
         android:textSize="15dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/tvfood_information"/>
 
     <LinearLayout
         android:id="@+id/layout_calories"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/food_name"
+        android:layout_below="@id/tvfood_name"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
@@ -30,7 +35,7 @@
             android:src="@drawable/calories" />
 
         <TextView
-            android:id="@+id/calories"
+            android:id="@+id/tvCalories"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nlight"
@@ -51,7 +56,7 @@
         android:id="@+id/layout_carbohydrates"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/food_name"
+        android:layout_below="@id/tvfood_name"
         android:layout_toRightOf="@id/layout_calories"
         android:gravity="center_vertical"
         android:orientation="horizontal">
@@ -63,7 +68,7 @@
             android:src="@drawable/carbohydrates" />
 
         <TextView
-            android:id="@+id/carbohydrates"
+            android:id="@+id/tvCarbohydrates"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nlight"
@@ -95,7 +100,7 @@
             android:src="@drawable/proteins" />
 
         <TextView
-            android:id="@+id/proteins"
+            android:id="@+id/tvProteins"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nlight"
@@ -128,7 +133,7 @@
             android:src="@drawable/fat" />
 
         <TextView
-            android:id="@+id/fat"
+            android:id="@+id/tvFat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nlight"
@@ -161,7 +166,7 @@
             android:src="@drawable/glucose" />
 
         <TextView
-            android:id="@+id/glucose"
+            android:id="@+id/tvGlucose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nlight"

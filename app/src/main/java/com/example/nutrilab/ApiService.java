@@ -3,6 +3,7 @@ package com.example.nutrilab;
 import com.example.nutrilab.model.FoodRecomendation;
 import com.example.nutrilab.model.FoodRequest;
 import com.example.nutrilab.model.FoodResponse;
+import com.example.nutrilab.model.HistoryResponse;
 import com.example.nutrilab.model.ProfileResponse;
 import com.example.nutrilab.model.ProgressNutritionResponse;
 import com.example.nutrilab.model.TotalNutritionResponse;
@@ -28,4 +29,7 @@ public interface ApiService {
 
     @GET("/food/recommendation/{userId}")
     Call<FoodRecomendation> getRecommendation(@Path("userId") String userId);
+
+    @GET("/history/{userId}")
+    Call<HistoryResponse> getUserHistory(@Path("userId") String userId);
 }
