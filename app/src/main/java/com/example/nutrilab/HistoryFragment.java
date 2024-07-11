@@ -1,5 +1,6 @@
 package com.example.nutrilab;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -26,6 +27,7 @@ public class HistoryFragment extends Fragment {
     private RecyclerView recyclerView;
     private MyAdapter adapter;
     private List<HistoryResponse.HistoryData> historyList;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -38,16 +40,19 @@ public class HistoryFragment extends Fragment {
         adapter = new MyAdapter(historyList);
         recyclerView.setAdapter(adapter);
 
+        // Mendapatkan data dari API menggunakan Retrofit
         ApiService apiService = RetrofitClient.getApiService();
-        String userId = "5fb3aa47-f976-4781-9c95-a6e65e8d9194";
+        String userId = "5fb3aa47-f976-4781-9c95-a6e65e8d9194"; // Ganti dengan userId sesuai kebutuhan Anda
         Call<HistoryResponse> call = apiService.getUserHistory(userId);
 
         call.enqueue(new Callback<HistoryResponse>() {
             @Override
             public void onResponse(Call<HistoryResponse> call, Response<HistoryResponse> response) {
-                if (response.isSuccessful() && response.body() !=null) {
+                if (response.isSuccessful() && response.body() != null) {
                     historyList.addAll(response.body().getData());
                     adapter.notifyDataSetChanged();
+                } else {
+                    Toast.makeText(getActivity(), "Failed to retrieve data", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -55,6 +60,23 @@ public class HistoryFragment extends Fragment {
             public void onFailure(Call<HistoryResponse> call, Throwable t) {
                 Log.e("HistoryFragment", "onFailure: " + t.getMessage());
                 Toast.makeText(getActivity(), "Request failed", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Menangani klik item di RecyclerView
+        adapter.setOnItemClickListener(new MyAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(HistoryResponse.HistoryData historyData) {
+                // Intent ke DetailActivity dengan data makanan
+                Intent intent = new Intent(getActivity(), DetailActivity.class);
+                intent.putExtra("foodName", historyData.getFoodName());
+                intent.putExtra("foodInformation", historyData.getFoodInformation());
+                intent.putExtra("calorie", String.valueOf(historyData.getTotalCalorie()));
+                intent.putExtra("sugar", String.valueOf(historyData.getTotalSugar()));
+                intent.putExtra("carbohydrate", String.valueOf(historyData.getTotalCarbohydrate()));
+                intent.putExtra("fat", String.valueOf(historyData.getTotalFat()));
+                intent.putExtra("protein", String.valueOf(historyData.getTotalProtein()));
+                startActivity(intent);
             }
         });
 

@@ -14,6 +14,15 @@ import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.HistoryViewHolder> {
     private List<HistoryResponse.HistoryData> historyList;
+    private OnItemClickListener onItemClickListener;
+
+    public interface OnItemClickListener {
+        void onItemClick(HistoryResponse.HistoryData historyData);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.onItemClickListener = listener;
+    }
 
     public static class HistoryViewHolder extends RecyclerView.ViewHolder {
         public TextView tvFoodName, tvFoodInformation, tvCalorie, tvCarbohydrate, tvProteins, tvFat, tvSugar;
@@ -27,6 +36,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.HistoryViewHolder>
             tvProteins = itemView.findViewById(R.id.tvProteins);
             tvFat = itemView.findViewById(R.id.tvFat);
             tvSugar = itemView.findViewById(R.id.tvGlucose);
+        }
+
+        public void bind(final HistoryResponse.HistoryData historyData, final OnItemClickListener listener) {
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.onItemClick(historyData);
+                }
+            });
         }
     }
 
@@ -52,6 +70,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.HistoryViewHolder>
         holder.tvProteins.setText(String.valueOf(historyData.getTotalProtein()));
         holder.tvFat.setText(String.valueOf(historyData.getTotalFat()));
         holder.tvSugar.setText(String.valueOf(historyData.getTotalSugar()));
+
+        holder.bind(historyData, onItemClickListener);
     }
 
     @Override

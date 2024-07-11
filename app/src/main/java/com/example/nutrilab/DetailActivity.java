@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class DetailActivity extends AppCompatActivity {
     private TextView txtFoodName, txtFoodInformation, txtCalorie, txtSugar, txtCarbo, txtFat, txtProtein;
-    private ProgressBar progressCalories, progressCarbo, progressProtein, progressFat, progressSugar;
+//    private ProgressBar progressCalories, progressCarbo, progressProtein, progressFat, progressSugar;
     private void initUI(){
         txtFoodName = findViewById(R.id.txt_food_name);
         txtFoodInformation = findViewById(R.id.txt_food_information);
@@ -22,11 +22,11 @@ public class DetailActivity extends AppCompatActivity {
         txtFat = findViewById(R.id.fat);
         txtProtein = findViewById(R.id.protein);
 
-        progressCalories = findViewById(R.id.progressBarCalories);
-        progressCarbo = findViewById(R.id.progressBarCarbohydrate);
-        progressProtein = findViewById(R.id.progressBarProtein);
-        progressFat = findViewById(R.id.progressBarFat);
-        progressSugar = findViewById(R.id.progressBarGlucose);
+//        progressCalories = findViewById(R.id.progressBarCalories);
+//        progressCarbo = findViewById(R.id.progressBarCarbohydrate);
+//        progressProtein = findViewById(R.id.progressBarProtein);
+//        progressFat = findViewById(R.id.progressBarFat);
+//        progressSugar = findViewById(R.id.progressBarGlucose);
     }
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,11 +43,6 @@ public class DetailActivity extends AppCompatActivity {
             String fat = intent.getStringExtra("fat");
             String protein = intent.getStringExtra("protein");
 
-//            int totalCalories = intent.getIntExtra("totalCalories", 0);
-//            int totalCarbohydrate = intent.getIntExtra("totalCarbohydrate", 0);
-//            int totalProtein = intent.getIntExtra("totalProtein", 0);
-//            int totalFat = intent.getIntExtra("totalFat", 0);
-//            int totalSugar = intent.getIntExtra("totalSugar", 0);
 
             txtFoodName.setText(foodName);
             txtFoodInformation.setText(foodInformation);
