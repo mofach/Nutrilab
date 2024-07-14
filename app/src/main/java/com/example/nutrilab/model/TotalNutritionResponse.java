@@ -18,29 +18,29 @@ public class TotalNutritionResponse {
     }
 
     public class NutritionData {
-        private float dailyCalorie;
-        private float dailyProtein;
-        private float dailyFat;
-        private float dailyCarbohydrate;
-        private float dailySugar;
+        private int dailyCalorie;
+        private int dailyProtein;
+        private int dailyFat;
+        private int dailyCarbohydrate;
+        private int dailySugar;
 
-        public float getDailyCalorie() {
+        public int getDailyCalorie() {
             return dailyCalorie;
         }
 
-        public float getDailyProtein() {
+        public int getDailyProtein() {
             return dailyProtein;
         }
 
-        public float getDailyFat() {
+        public int getDailyFat() {
             return dailyFat;
         }
 
-        public float getDailyCarbohydrate() {
+        public int getDailyCarbohydrate() {
             return dailyCarbohydrate;
         }
 
-        public float getDailySugar() {
+        public int getDailySugar() {
             return dailySugar;
         }
     }

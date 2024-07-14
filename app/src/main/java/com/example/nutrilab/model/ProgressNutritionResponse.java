@@ -18,29 +18,29 @@ public class ProgressNutritionResponse {
     }
 
     public class ProgressData {
-        private float totalCalories;
-        private float totalCarbohydrate;
-        private float totalProtein;
-        private float totalFat;
-        private float totalSugar;
+        private int totalCalories;
+        private int totalCarbohydrate;
+        private int totalProtein;
+        private int totalFat;
+        private int totalSugar;
 
-        public float getTotalCalories() {
+        public int getTotalCalories() {
             return totalCalories;
         }
 
-        public float getTotalCarbohydrate() {
+        public int getTotalCarbohydrate() {
             return totalCarbohydrate;
         }
 
-        public float getTotalProtein() {
+        public int getTotalProtein() {
             return totalProtein;
         }
 
-        public float getTotalFat() {
+        public int getTotalFat() {
             return totalFat;
         }
 
-        public float getTotalSugar() {
+        public int getTotalSugar() {
             return totalSugar;
         }
     }
