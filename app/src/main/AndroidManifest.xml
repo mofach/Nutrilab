@@ -15,18 +15,22 @@
         android:theme="@style/Theme.Nutrilab">
 
         <!-- Main Activity (Launcher) -->
-        <activity android:name=".MainActivity"
+        <activity android:name=".Register2Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <!-- Additional Activities -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"/>
         <activity
             android:name=".SplashscreenActivity"
             android:exported="false"/>
-
-        <!-- Additional Activities -->
         <activity
             android:name=".DetailActivity"
             android:exported="false" />
