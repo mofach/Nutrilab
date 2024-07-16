@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -20,10 +21,12 @@ import retrofit2.Response;
 public class SignupActivity extends AppCompatActivity {
     private EditText loginEmail, loginPassword;
     private Button btnLogin;
+    private TextView signupTextView;
     private void initUI() {
         loginEmail = findViewById(R.id.login_email);
         loginPassword = findViewById(R.id.login_password);
         btnLogin = findViewById(R.id.btn_login);
+        signupTextView = findViewById(R.id.txt_signup);
     }
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,6 +39,13 @@ public class SignupActivity extends AppCompatActivity {
                 String email = loginEmail.getText().toString();
                 String password = loginPassword.getText().toString();
                 loginUser(email, password);
+            }
+        });
+        signupTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentSignUp = new Intent(SignupActivity.this, RegisterActivity.class);
+                startActivity(intentSignUp);
             }
         });
     }
