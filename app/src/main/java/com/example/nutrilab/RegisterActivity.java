@@ -63,7 +63,12 @@ public class RegisterActivity extends AppCompatActivity {
                         Toast.makeText(RegisterActivity.this, registerResponse.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    Toast.makeText(RegisterActivity.this, "Registration failed!", Toast.LENGTH_SHORT).show();
+                    try {
+                        String errorMessage = response.errorBody().string();
+                        Toast.makeText(RegisterActivity.this, "Login failed: " + errorMessage, Toast.LENGTH_SHORT).show();
+                    } catch (Exception e) {
+                        Toast.makeText(RegisterActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
 

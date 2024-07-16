@@ -60,7 +60,12 @@ public class SignupActivity extends AppCompatActivity {
                         Toast.makeText(SignupActivity.this, loginResponse.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    Toast.makeText(SignupActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
+                    try {
+                        String errorMessage = response.errorBody().string();
+                        Toast.makeText(SignupActivity.this, "Login failed: " + errorMessage, Toast.LENGTH_SHORT).show();
+                    } catch (Exception e) {
+                        Toast.makeText(SignupActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
 

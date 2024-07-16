@@ -97,7 +97,12 @@ public class Register2Activity extends AppCompatActivity {
                         Toast.makeText(Register2Activity.this, createProfileResponse.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    Toast.makeText(Register2Activity.this, "Profile creation failed!", Toast.LENGTH_SHORT).show();
+                    try {
+                        String errorMessage = response.errorBody().string();
+                        Toast.makeText(Register2Activity.this, "Login failed: " + errorMessage, Toast.LENGTH_SHORT).show();
+                    } catch (Exception e) {
+                        Toast.makeText(Register2Activity.this, "Login failed", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
 
