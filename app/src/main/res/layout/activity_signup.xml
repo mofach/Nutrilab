@@ -51,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="Email"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:fontFamily="@font/nregular"
                 android:textColorHint="#2C2C2C"
                 android:textColor="@color/black"/>
@@ -75,7 +75,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Password"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:fontFamily="@font/nregular"
             android:textColorHint="#2C2C2C"
             android:textColor="@color/black"/>
