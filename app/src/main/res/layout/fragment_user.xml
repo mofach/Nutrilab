@@ -61,7 +61,7 @@
                     android:layout_height="45dp"
                     android:layout_marginVertical="15dp"
                     android:layout_weight="1"
-                    android:background="@drawable/custom_edittextbg"
+                    android:background="@drawable/custom_bgtealmint"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -97,7 +97,7 @@
                     android:layout_height="45dp"
                     android:layout_marginVertical="15dp"
                     android:layout_weight="1"
-                    android:background="@drawable/custom_edittextbg"
+                    android:background="@drawable/custom_bgtealmint"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -141,7 +141,7 @@
                     android:layout_height="45dp"
                     android:layout_marginVertical="15dp"
                     android:layout_weight="1"
-                    android:background="@drawable/custom_edittextbg"
+                    android:background="@drawable/custom_bgtealmint"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -177,7 +177,7 @@
                     android:layout_height="45dp"
                     android:layout_marginVertical="15dp"
                     android:layout_weight="1"
-                    android:background="@drawable/custom_edittextbg"
+                    android:background="@drawable/custom_bgtealmint"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -213,7 +213,7 @@
                     android:layout_height="45dp"
                     android:layout_marginVertical="15dp"
                     android:layout_weight="1"
-                    android:background="@drawable/custom_edittextbg"
+                    android:background="@drawable/custom_bgtealmint"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -249,7 +249,7 @@
                     android:layout_height="45dp"
                     android:layout_marginVertical="15dp"
                     android:layout_weight="1"
-                    android:background="@drawable/custom_edittextbg"
+                    android:background="@drawable/custom_bgtealmint"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -285,7 +285,7 @@
                     android:layout_height="45dp"
                     android:layout_marginVertical="15dp"
                     android:layout_weight="1"
-                    android:background="@drawable/custom_edittextbg"
+                    android:background="@drawable/custom_bgtealmint"
                     android:gravity="center"
                     android:orientation="horizontal">
 

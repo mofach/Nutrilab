@@ -26,23 +26,36 @@
         android:textAlignment="center"
         android:textColor="@color/teal_green"
         android:textSize="15sp" />
-
     <Button
         android:id="@+id/btn_landing_login"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:fontFamily="@font/nbold"
         android:text="Login"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:background="@drawable/custom_bgtealmint"
+        android:textColor="@color/white"/>
 
-    <Button
-        android:id="@+id/btn_landing_register"
+    <RelativeLayout
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_margin="15dp"
-        android:fontFamily="@font/nbold"
-        android:text="Register"
-        android:textSize="20sp" />
+        android:layout_marginVertical="15dp"
+        android:background="@drawable/custom_bgtealmint"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_landing_register"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_margin="4dp"
+            android:fontFamily="@font/nbold"
+            android:text="Register"
+            android:textSize="20sp"
+            android:background="@drawable/custom_background3"
+            android:textColor="@color/teal_green"/>
+
+
+    </RelativeLayout>
 
 
 </LinearLayout>
