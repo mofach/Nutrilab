@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ import retrofit2.Response;
 
 public class UserFragment extends Fragment {
     private FloatingActionButton fabEdit;
+    private Button btnLogout;
     private TextView txtUserFullname, txtUsername, txtUserEmail, txtUserGender, txtUserDOB, txtUserAllergies, txtUserHeight, txtUserWeight;
 
     private void initUI(View view) {
@@ -34,6 +36,7 @@ public class UserFragment extends Fragment {
         txtUserHeight = view.findViewById(R.id.user_height);
         txtUserWeight = view.findViewById(R.id.user_weight);
         fabEdit = view.findViewById(R.id.fab_edit);
+        btnLogout = view.findViewById(R.id.btn_logout);
     }
 
     @Nullable
@@ -50,6 +53,18 @@ public class UserFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), EditProfilActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPrefManager.getInstance(getContext()).removeUserId();
+
+                Intent intent = new Intent(getContext(), LandingActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
         return view;

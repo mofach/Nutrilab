@@ -246,8 +246,13 @@ public class HomeFragment extends Fragment {
                     txtWeight.setText(String.valueOf(profileData.getWeight()));
                     txtHeight.setText(String.valueOf(profileData.getHeight()));
 
-                }else {
-                    Toast.makeText(getActivity(), "Failed to retrieve nutrition information", Toast.LENGTH_SHORT).show();
+                } else {
+                    try {
+                        String errorMessage = response.errorBody().string();
+                        Toast.makeText(getActivity(), "Error: " + errorMessage, Toast.LENGTH_LONG).show();
+                    } catch (IOException e) {
+                        Toast.makeText(getActivity(), "Failed to retrieve food information", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
 
@@ -288,7 +293,12 @@ public class HomeFragment extends Fragment {
                     txtTotalFat.setText(String.valueOf(nutritionData.getDailyFat())+ "kkal");
                     txtTotalSugar.setText(String.valueOf(nutritionData.getDailySugar())+ "g");
                 } else {
-                    Toast.makeText(getActivity(), "Failed to retrieve nutrition information", Toast.LENGTH_SHORT).show();
+                    try {
+                        String errorMessage = response.errorBody().string();
+                        Toast.makeText(getActivity(), "Error: " + errorMessage, Toast.LENGTH_LONG).show();
+                    } catch (IOException e) {
+                        Toast.makeText(getActivity(), "Failed to retrieve food information", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
 
@@ -322,7 +332,12 @@ public class HomeFragment extends Fragment {
                     txtProgresFat.setText(String.valueOf(progressData.getTotalFat())+ "/");
                     txtProgresSugar.setText(String.valueOf(progressData.getTotalSugar())+ "/");
                 } else {
-                    Toast.makeText(getActivity(), "Failed to retrieve nutrition information", Toast.LENGTH_SHORT).show();
+                    try {
+                        String errorMessage = response.errorBody().string();
+                        Toast.makeText(getActivity(), "Error: " + errorMessage, Toast.LENGTH_LONG).show();
+                    } catch (IOException e) {
+                        Toast.makeText(getActivity(), "Failed to retrieve food information", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
 
