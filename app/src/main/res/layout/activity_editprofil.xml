@@ -32,6 +32,7 @@
             android:layout_gravity="end|bottom"
             android:layout_margin="16dp"
             android:background="@drawable/circle_shape"
+            android:backgroundTint="#E91E63"
             android:contentDescription="edit"
             android:src="@drawable/outline_mode_edit_24"
             app:backgroundTint="#006769"
@@ -65,10 +66,35 @@
                 android:textColor="@color/white"
                 android:textSize="15sp" />
 
-            <EditText
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Fullname" />
+                android:layout_height="45dp"
+                android:layout_marginVertical="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_bgtealgrey"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/custom_background3mint"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/outline_account_circle_24blk"
+                        android:layout_marginRight="10dp"/>
+
+                    <EditText
+                        android:id="@+id/editText_fullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Fullname" />
+                </LinearLayout>
+            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -79,32 +105,212 @@
                 android:textColor="@color/white"
                 android:textSize="15sp" />
 
-            <EditText
+            <!-- Satu -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Gender" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="45dp"
                 android:layout_marginVertical="15dp"
-                android:hint="Birth Date" />
+                android:layout_weight="1"
+                android:background="@drawable/custom_bgtealgrey"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Allergies" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/custom_background3mint"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical">
 
-            <EditText
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/outline_male_24blk"
+                        android:layout_marginRight="10dp"/>
+                    <Spinner
+                        android:id="@+id/gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Dua -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="45dp"
                 android:layout_marginVertical="15dp"
-                android:hint="Height" />
+                android:layout_weight="1"
+                android:background="@drawable/custom_bgtealgrey"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <EditText
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/custom_background3mint"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/baseline_cake_24blk"
+                        android:layout_marginRight="10dp"/>
+                    <EditText
+                        android:id="@+id/editText_birth_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Birth Date"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/nregular"
+                        android:textColorHint="#2C2C2C"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Tiga -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Weight" />
+                android:layout_height="45dp"
+                android:layout_marginVertical="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_bgtealgrey"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/custom_background3mint"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/outline_coronavirus_24blk"
+                        android:layout_marginRight="10dp"/>
+                    <EditText
+                        android:id="@+id/reg_allergies"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Allergies"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/nregular"
+                        android:textColorHint="#2C2C2C"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Empat -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginVertical="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_bgtealgrey"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/custom_background3mint"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/outline_height_24blk"
+                        android:layout_marginRight="10dp"/>
+                    <EditText
+                        android:id="@+id/reg_height"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Height"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/nregular"
+                        android:textColorHint="#2C2C2C"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Lima -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginVertical="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_bgtealgrey"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/custom_background3mint"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/outline_balance_24blk"
+                        android:layout_marginRight="10dp"/>
+                    <EditText
+                        android:id="@+id/reg_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Weight"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/nregular"
+                        android:textColorHint="#2C2C2C"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Enam -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginVertical="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_bgtealgrey"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/custom_background3mint"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/outline_bloodtype_24blk"
+                        android:layout_marginRight="10dp"/>
+                    <Spinner
+                        android:id="@+id/bloodtypes"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:autofillHints="Bloodtypes"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </LinearLayout>
 
         </LinearLayout>
 
