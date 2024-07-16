@@ -65,7 +65,7 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="3dp"
@@ -76,7 +76,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
-                            android:src="@drawable/outline_badge_24" />
+                            android:src="@drawable/outline_badge_24"
+                            android:layout_marginRight="5dp"/>
 
                         <TextView
                             android:id="@+id/user_username"
@@ -86,8 +87,8 @@
                             android:gravity="center_vertical"
                             android:padding="5dp"
                             android:textColor="@color/teal_green"
-                            android:textSize="20sp" />
-                    </RelativeLayout>
+                            android:textSize="20sp"/>
+                    </LinearLayout>
 
 
                 </LinearLayout>
@@ -101,7 +102,7 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="3dp"
@@ -112,6 +113,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
+                            android:layout_marginRight="5dp"
                             android:src="@drawable/outline_email_24" />
 
                         <TextView
@@ -123,7 +125,7 @@
                             android:padding="5dp"
                             android:textColor="@color/teal_green"
                             android:textSize="20sp" />
-                    </RelativeLayout>
+                    </LinearLayout>
 
 
                 </LinearLayout>
@@ -145,7 +147,7 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="3dp"
@@ -156,6 +158,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
+                            android:layout_marginRight="5dp"
                             android:src="@drawable/outline_female_24" />
 
                         <TextView
@@ -167,7 +170,7 @@
                             android:padding="5dp"
                             android:textColor="@color/teal_green"
                             android:textSize="20sp" />
-                    </RelativeLayout>
+                    </LinearLayout>
 
 
                 </LinearLayout>
@@ -181,7 +184,7 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="3dp"
@@ -192,6 +195,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
+                            android:layout_marginRight="5dp"
                             android:src="@drawable/outline_cake_24" />
 
                         <TextView
@@ -203,7 +207,7 @@
                             android:padding="5dp"
                             android:textColor="@color/teal_green"
                             android:textSize="20sp" />
-                    </RelativeLayout>
+                    </LinearLayout>
 
 
                 </LinearLayout>
@@ -217,7 +221,7 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="3dp"
@@ -228,6 +232,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
+                            android:layout_marginRight="5dp"
                             android:src="@drawable/outline_coronavirus_24" />
 
                         <TextView
@@ -239,7 +244,7 @@
                             android:padding="5dp"
                             android:textColor="@color/teal_green"
                             android:textSize="20sp" />
-                    </RelativeLayout>
+                    </LinearLayout>
 
 
                 </LinearLayout>
@@ -253,7 +258,7 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="3dp"
@@ -264,6 +269,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
+                            android:layout_marginRight="5dp"
                             android:src="@drawable/outline_height_24" />
 
                         <TextView
@@ -275,7 +281,7 @@
                             android:padding="5dp"
                             android:textColor="@color/teal_green"
                             android:textSize="20sp" />
-                    </RelativeLayout>
+                    </LinearLayout>
 
 
                 </LinearLayout>
@@ -289,7 +295,7 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="3dp"
@@ -300,6 +306,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
+                            android:layout_marginRight="5dp"
                             android:src="@drawable/outline_balance_24" />
 
                         <TextView
@@ -311,7 +318,7 @@
                             android:padding="5dp"
                             android:textColor="@color/teal_green"
                             android:textSize="20sp" />
-                    </RelativeLayout>
+                    </LinearLayout>
 
 
                 </LinearLayout>
@@ -319,12 +326,15 @@
 
                 <Button
                     android:id="@+id/btn_logout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
                     android:layout_marginBottom="20dp"
-                    android:textColor="@color/white"
-                    android:backgroundTint="@android:color/holo_red_dark"
-                    android:text="log out"/>
+                    android:textColor="#E91E63"
+                    android:background="@drawable/custom_bg_red"
+                    android:text="log out"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/nbold"/>
             </LinearLayout>
         </ScrollView>
 
@@ -337,6 +347,7 @@
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
         android:background="@drawable/circle_shape"
+        android:backgroundTint="#E91E63"
         android:contentDescription="edit"
         android:src="@drawable/outline_mode_edit_24"
         app:backgroundTint="#006769"
