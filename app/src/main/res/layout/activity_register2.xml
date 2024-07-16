@@ -45,17 +45,20 @@
         android:clickable="true" />
 
     <EditText
+        android:id="@+id/reg_allergies"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Allergies" />
 
     <EditText
+        android:id="@+id/reg_height"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginVertical="15dp"
         android:hint="Height" />
 
     <EditText
+        android:id="@+id/reg_weight"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Weight" />
@@ -67,6 +70,7 @@
         android:layout_marginVertical="15dp"
         android:autofillHints="Bloodtypes"/>
     <Button
+        android:id="@+id/btn_regis2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginVertical="15dp"

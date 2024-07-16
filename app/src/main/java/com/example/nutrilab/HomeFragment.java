@@ -177,7 +177,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void getRecommendation() {
-        String userId = "5fb3aa47-f976-4781-9c95-a6e65e8d9194";
+        String userId = SharedPrefManager.getInstance(getActivity()).getUserId();
         ApiService apiService = RetrofitClient.getApiService();
         Call<FoodRecomendation> call = apiService.getRecommendation(userId);
 
@@ -232,7 +232,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void getProfileUser() {
-        String userId = "5fb3aa47-f976-4781-9c95-a6e65e8d9194";
+        String userId = SharedPrefManager.getInstance(getActivity()).getUserId();
         ApiService apiService = RetrofitClient.getApiService();
         Call<ProfileResponse> call = apiService.getProfileUser(userId);
 
@@ -267,7 +267,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void getTotalProgress() {
-        String userId = "5fb3aa47-f976-4781-9c95-a6e65e8d9194";
+        String userId = SharedPrefManager.getInstance(getActivity()).getUserId();
         ApiService apiService = RetrofitClient.getApiService();
         Call<TotalNutritionResponse> call = apiService.getTotalNutrition(userId);
 
@@ -301,7 +301,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void getProgress() {
-        String userId = "5fb3aa47-f976-4781-9c95-a6e65e8d9194";
+        String userId = SharedPrefManager.getInstance(getActivity()).getUserId();
         ApiService apiService = RetrofitClient.getApiService();
         Call<ProgressNutritionResponse> call = apiService.getProgressNutrition(userId);
 
@@ -336,7 +336,7 @@ public class HomeFragment extends Fragment {
 
     private void trackFood(String food) {
         progressDialog.show();
-        String userId = "5fb3aa47-f976-4781-9c95-a6e65e8d9194";
+        String userId = SharedPrefManager.getInstance(getActivity()).getUserId();
         FoodRequest foodRequest = new FoodRequest(food, userId);
         ApiService apiService = RetrofitClient.getApiService();
         Call<FoodResponse> call = apiService.trackFood(foodRequest);

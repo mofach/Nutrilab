@@ -56,7 +56,7 @@ public class UserFragment extends Fragment {
     }
 
     private void getUserProfile() {
-        String userId = "5fb3aa47-f976-4781-9c95-a6e65e8d9194";
+        String userId = SharedPrefManager.getInstance(getActivity()).getUserId();
         ApiService apiService = RetrofitClient.getApiService();
         Call<ProfileResponse> call = apiService.getProfileUser(userId);
 

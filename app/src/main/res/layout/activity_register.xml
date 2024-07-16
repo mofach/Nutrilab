@@ -39,33 +39,35 @@
         android:textColor="@color/white"
         android:textSize="15sp" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Fullname" />
+
 
     <EditText
+        android:id="@+id/registerName"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginVertical="15dp"
         android:hint="Username" />
 
     <EditText
+        android:id="@+id/registerEmail"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Email" />
 
     <EditText
+        android:id="@+id/registerPassword"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginVertical="15dp"
         android:hint="Password" />
     <EditText
+        android:id="@+id/registerConfirmPassword"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Confirmation Password"
         android:layout_marginBottom="15dp"/>
     <Button
+        android:id="@+id/btnRegis"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginVertical="15dp"

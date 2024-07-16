@@ -1,11 +1,17 @@
 package com.example.nutrilab;
 
+import com.example.nutrilab.model.CreateProfileRequest;
+import com.example.nutrilab.model.CreateProfileResponse;
 import com.example.nutrilab.model.FoodRecomendation;
 import com.example.nutrilab.model.FoodRequest;
 import com.example.nutrilab.model.FoodResponse;
 import com.example.nutrilab.model.HistoryResponse;
+import com.example.nutrilab.model.LoginRequest;
+import com.example.nutrilab.model.LoginResponse;
 import com.example.nutrilab.model.ProfileResponse;
 import com.example.nutrilab.model.ProgressNutritionResponse;
+import com.example.nutrilab.model.RegisterRequest;
+import com.example.nutrilab.model.RegisterResponse;
 import com.example.nutrilab.model.TotalNutritionResponse;
 
 import retrofit2.Call;
@@ -32,4 +38,13 @@ public interface ApiService {
 
     @GET("/history/{userId}")
     Call<HistoryResponse> getUserHistory(@Path("userId") String userId);
+
+    @POST("/auth/login")
+    Call<LoginResponse> loginUser(@Body LoginRequest loginRequest);
+
+    @POST("/auth/register")
+    Call<RegisterResponse> registerUser(@Body RegisterRequest registerRequest);
+
+    @POST("/profile")
+    Call<CreateProfileResponse> createProfile(@Body CreateProfileRequest CreateProfileRequest);
 }

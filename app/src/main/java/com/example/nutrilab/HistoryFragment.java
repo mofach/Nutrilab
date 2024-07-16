@@ -40,9 +40,10 @@ public class HistoryFragment extends Fragment {
         adapter = new MyAdapter(historyList);
         recyclerView.setAdapter(adapter);
 
-        // Mendapatkan data dari API menggunakan Retrofit
+
+
         ApiService apiService = RetrofitClient.getApiService();
-        String userId = "5fb3aa47-f976-4781-9c95-a6e65e8d9194"; // Ganti dengan userId sesuai kebutuhan Anda
+        String userId = SharedPrefManager.getInstance(getActivity()).getUserId();
         Call<HistoryResponse> call = apiService.getUserHistory(userId);
 
         call.enqueue(new Callback<HistoryResponse>() {

@@ -28,20 +28,20 @@
         android:textSize="15sp" />
 
     <Button
-        android:id="@+id/btn_signup"
+        android:id="@+id/btn_landing_login"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:fontFamily="@font/nbold"
-        android:text="Sign Up"
+        android:text="Login"
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/btn_signin"
+        android:id="@+id/btn_landing_register"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_margin="15dp"
         android:fontFamily="@font/nbold"
-        android:text="Sign In"
+        android:text="Register"
         android:textSize="20sp" />
 
 
