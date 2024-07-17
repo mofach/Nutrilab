@@ -59,48 +59,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:fontFamily="@font/nregular"
-                android:text="Account"
-                android:textAlignment="textStart"
-                android:textColor="@color/white"
-                android:textSize="15sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginVertical="15dp"
-                android:layout_weight="1"
-                android:background="@drawable/custom_bgtealgrey"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="3dp"
-                    android:background="@drawable/custom_background3mint"
-                    android:paddingHorizontal="10dp"
-                    android:gravity="center_vertical">
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/outline_account_circle_24blk"
-                        android:layout_marginRight="10dp"/>
-
-                    <EditText
-                        android:id="@+id/editText_fullname"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:hint="Fullname" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nregular"
-                android:text="Fill Your Body Data"
+                android:text="Edit Your Body Data"
                 android:textAlignment="textStart"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
@@ -129,7 +89,7 @@
                         android:src="@drawable/outline_male_24blk"
                         android:layout_marginRight="10dp"/>
                     <Spinner
-                        android:id="@+id/gender"
+                        android:id="@+id/edit_gender"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:textSize="20sp"
@@ -198,7 +158,7 @@
                         android:src="@drawable/outline_coronavirus_24blk"
                         android:layout_marginRight="10dp"/>
                     <EditText
-                        android:id="@+id/reg_allergies"
+                        android:id="@+id/edit_allergies"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:hint="Allergies"
@@ -233,7 +193,7 @@
                         android:src="@drawable/outline_height_24blk"
                         android:layout_marginRight="10dp"/>
                     <EditText
-                        android:id="@+id/reg_height"
+                        android:id="@+id/edit_height"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:hint="Height"
@@ -268,7 +228,7 @@
                         android:src="@drawable/outline_balance_24blk"
                         android:layout_marginRight="10dp"/>
                     <EditText
-                        android:id="@+id/reg_weight"
+                        android:id="@+id/edit_weight"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:hint="Weight"
@@ -317,6 +277,7 @@
     </ScrollView>
 
     <Button
+        android:id="@+id/btn_edit"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginVertical="15dp"

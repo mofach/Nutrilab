@@ -2,6 +2,8 @@ package com.example.nutrilab;
 
 import com.example.nutrilab.model.CreateProfileRequest;
 import com.example.nutrilab.model.CreateProfileResponse;
+import com.example.nutrilab.model.EditProfileRequest;
+import com.example.nutrilab.model.EditProfileResponse;
 import com.example.nutrilab.model.FoodRecomendation;
 import com.example.nutrilab.model.FoodRequest;
 import com.example.nutrilab.model.FoodResponse;
@@ -17,6 +19,7 @@ import com.example.nutrilab.model.TotalNutritionResponse;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.PATCH;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 
@@ -47,4 +50,7 @@ public interface ApiService {
 
     @POST("/profile")
     Call<CreateProfileResponse> createProfile(@Body CreateProfileRequest CreateProfileRequest);
+
+    @PATCH("/profile/{userId}")
+    Call<EditProfileResponse> editProfile(@Path("userId") String userId, @Body EditProfileRequest editProfileRequest);
 }
