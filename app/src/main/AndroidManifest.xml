@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,44 +12,41 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        tools:targetApi="31"
-        android:theme="@style/Theme.Nutrilab">
-
-        <activity android:name=".Register2Activity"
-            android:exported="false"/>
-
+        android:theme="@style/Theme.Nutrilab"
+        tools:targetApi="31">
+        <activity
+            android:name=".DeveloperActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Register2Activity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".SplashscreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".DetailActivity"
             android:exported="false" />
-
         <activity
             android:name=".EditProfilActivity"
             android:exported="false" />
-
         <activity
             android:name=".LandingActivity"
             android:exported="false" />
-
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".SignupActivity"
             android:exported="false" />
-
     </application>
 
 </manifest>

@@ -103,6 +103,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Password"
+            android:inputType="textPassword"
             android:fontFamily="@font/nregular"
             android:textColorHint="#2C2C2C"
             android:textColor="@color/black"
@@ -127,6 +128,7 @@
             android:layout_height="50dp"
             android:hint="Confirmation Password"
             android:fontFamily="@font/nregular"
+            android:inputType="textPassword"
             android:textColorHint="#2C2C2C"
             android:textColor="@color/black"
             android:textSize="20sp"/>

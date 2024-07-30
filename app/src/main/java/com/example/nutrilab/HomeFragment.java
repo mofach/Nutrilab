@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -35,6 +36,7 @@ import retrofit2.Response;
 public class HomeFragment extends Fragment {
 
     private EditText editFood;
+    private ImageView developer;
     private RelativeLayout layoutRekomendasi1, layoutRekomendasi2, layoutRekomendasi3;
     private ShapeableImageView btnSend;
     private ProgressDialog progressDialog;
@@ -42,6 +44,7 @@ public class HomeFragment extends Fragment {
     private ProgressBar pbCalories, pbCarbo, pbProtein, pbFat, pbSugar;
 
     private void initUI(View view) {
+        developer = view.findViewById(R.id.developer);
         editFood = view.findViewById(R.id.edit_food);
         btnSend = view.findViewById(R.id.btn_send);
         pbCalories = view.findViewById(R.id.pb_calories);
@@ -168,6 +171,15 @@ public class HomeFragment extends Fragment {
             startActivity(intent);
         });
 
+        developer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), DeveloperActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         getProgress();
         getTotalProgress();
         getProfileUser();
@@ -269,6 +281,7 @@ public class HomeFragment extends Fragment {
         super.onResume();
         getProgress();
         getTotalProgress();
+        editFood.setText("");
     }
 
     private void getTotalProgress() {
